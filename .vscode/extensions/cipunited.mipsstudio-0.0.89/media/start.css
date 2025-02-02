@@ -1,0 +1,125 @@
+body {
+    margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.mainArea {
+	width: fit-content;
+	/* margin: auto;  /*可以实现居中*/
+	margin-left: 60px;
+}
+
+
+.content {
+	display: flex;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 2px;
+}
+
+ul+li {
+	padding-left: 6px;
+}
+
+.fit-picture {
+	height:24px;
+	vertical-align: middle;
+	margin: 4px;
+}
+
+.fit-picture2 {
+	height:24px;
+	margin-top: 2px;
+	margin-left: 4px;
+}
+
+.leftItems {
+	display: block;
+	width: fit-content;
+	flex-direction: row;
+	margin-right: 50px;
+	min-width: 360px;
+}
+
+.rightItems {
+	display: block;
+	min-width: 320px;
+    margin-left: 40px;
+}
+
+.startArea {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	border: 2px solid var(--vscode-widget-border,var(--vscode-settings-focusedRowBorder,drakgray));
+}
+
+.recentArea {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	min-height: 100px;
+	border: 2px solid var(--vscode-widget-border,var(--vscode-settings-focusedRowBorder,drakgray));
+}
+
+.helpArea {
+	margin-right: 10px;
+	margin-top: 10px;
+	border: 2px solid var(--vscode-widget-border,var(--vscode-settings-focusedRowBorder,drakgray));
+}
+
+
+button.button-link {
+	border: inherit;
+	color: var(--vscode-textLink-foreground);
+	padding: 0;
+	background: transparent;
+	margin: 2px;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+button.buttonhelpLink {
+	box-sizing: border-box;
+    line-height: normal;
+	background: transparent;
+    padding: 6px 6px;
+	cursor: pointer;
+    text-align: left;
+	overflow: hidden;
+	border: 0px solid var(--vscode-contrastBorder);
+	color: var(--vscode-foreground);
+}
+
+.path-detail {
+	padding-left: 1em;
+	color: var(--vscode-foreground);
+}
+
+.class1 {
+	display: flex;
+	margin-bottom: 6px;
+}
+
+.class2 {
+	display: block;
+	margin-left: 20px;
+}
+
+.helpTitle {
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: left;
+}
+
+legend {
+	font-size: 1.5em;
+}

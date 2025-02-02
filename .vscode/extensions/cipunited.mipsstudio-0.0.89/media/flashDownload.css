@@ -1,0 +1,155 @@
+
+body {
+	/* background-color: white; */
+	/* margin: 6em auto; */
+	min-width: 800px;
+	min-height: 400px;
+	/* color: black; */
+}
+
+h1 {
+	margin-left: 20px;
+}
+
+h2 {
+	margin-left: 20px;
+}
+
+
+.rightdiv {
+	float: left;
+	margin-left: 16px;
+	margin-right: 20px;
+}
+
+.defaultbox{
+	float: right;
+	display: flex;
+	align-items: center;
+	background-color: #ccc;
+	margin-top: 2px;
+	margin-left: 6px;
+	min-height: 28px;
+	width: 120px;
+}
+
+.defaultbox:hover {
+	background-color: #316be765;
+}
+
+.btn {
+	background-color:transparent;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	border: none;
+	text-align: center;
+}
+
+
+.configContent {
+	float: left;
+	background-color: #fff;
+	width: 640px;
+	height: 400px; 
+	border: solid 2px #444;
+}
+
+.contnetdetail {
+	display: grid;
+	grid-template-columns: 248px;
+	grid-column-gap: 5px;
+	grid-auto-rows: 30px;
+	grid-row-gap: 5px;
+	background-color: aliceblue;
+	margin-top: 6px;
+	width: 624px;
+	height: 360px;
+	border: solid 1px #333;
+	color: #333;
+}
+
+
+.contentbox1 {
+	display: inline-flex;
+    align-items: center;
+	margin-top: 20px;
+	margin-left: 30px;
+	grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.contentbox1minH {
+	display: inline-flex;
+    align-items: center;
+	margin-top: 2px;
+	margin-left: 30px;
+	grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.contentbox2 {
+	display: inline-flex;
+    align-items: center;
+	margin-top: 20px;
+	grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.contentlabel {
+	min-width: 120px;
+}
+
+
+.container {
+	display: grid;
+	grid-template-columns: 130px;
+	grid-column-gap: 20px;
+	grid-auto-rows: 24px;
+	grid-row-gap: 4px;
+	margin-top: auto;
+}
+
+.containerbox1 {
+	display: inline-flex;
+    align-items: center;
+	grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.containerbox2 {
+	display: inline-flex;
+    align-items: center;
+	grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.contentbox1H_Header {
+	display: inline-flex;
+    align-items: center;
+	margin-top: 30px;
+	margin-left: 30px;
+	grid-column-start: 1;
+    grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.contentbox2H_Header {
+	display: inline-flex;
+    align-items: center;
+	/* margin-top: 6px;  */
+	grid-column-start: 2;
+    grid-column-end: 3;
+	/* grid-auto-rows: auto;  */
+	width: 280px;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.selectinputmin {
+	width: 80px;
+	height: 20px;
+	margin-left: 12px;
+	text-size-adjust: auto;
+}

@@ -1,0 +1,455 @@
+{
+  "package": {
+    "vendor": "CIP",
+    "name": "MIPS_CPU_DFP",
+    "description": "Data file pack for all of MIPS processors.",
+    "url": "https://www.mips.com/products/mips-isa",
+    "releases": [
+      {
+        "version": "1.0.0",
+        "date": "2023-07-06",
+        "changeDesc": "Initial release",
+        "tag": "v1.0.0"
+      }
+    ],
+    "families": [
+      {
+        "familyName": "MIPS Classic",
+        "deviceVendor": "MIPS",
+        "description": "Classic Processor Cores",
+        "subfamilies": [
+          {
+            "subfamilyName": "MIPS32 M4K/4K",
+            "description": "The MIPS32 M4K/4K family includes MIPS32 4K, MIPS32 4KSd, MIPS32 4KE and MIPS32 M4K 32-bit synthesizable processor cores.",
+            "devices": [
+              {
+                "deviceName": "MIPS32 4K",
+                "description": "the M4K core is designed around a 5-stage pipeline, SRAM interface and comprehensive debug features.",
+                "processors": [
+                  {
+                    "procName": "MIPS32 4K",
+                    "devCore": "MIPS32 4K",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r2",
+                    "devFpu": "NO_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "NO_DSP"
+                  }
+                ]
+              },
+              {
+                "deviceName": "MIPS32 4KSd",
+                "description": "",
+                "processors": [
+                  {
+                    "procName": "MIPS32 4K",
+                    "devCore": "MIPS32 4K",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r2",
+                    "devFpu": "NO_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "NO_DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS32 M14K/c",
+            "description": "The MIPS32 M14K family of cores have a high-performance, compact, low-power design with features that are optimized to deliver a superior solution for microcontroller (MCU) and real-time embedded system applications.",
+            "devices": [
+              {
+                "deviceName": "MIPS32 14K",
+                "description": "The M14K core includes real time performance, flash memory acceleration, reduced interrupt latency, features required for best in class MCU designs.",
+                "processors": [
+                  {
+                    "procName": "MIPS32 14K",
+                    "devCore": "MIPS32 14K",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r2",
+                    "devFpu": "NO_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "NO_DSP"
+                  }
+                ]
+              },
+              {
+                "deviceName": "MIPS32 4Kc",
+                "description": "d_desc",
+                "processors": [
+                  {
+                    "procName": "MIPS32 14K",
+                    "devCore": "MIPS32 14K",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r2",
+                    "devFpu": "NO_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "NO_DSP"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "familyName": "MIPS Warrior M-Class",
+        "deviceVendor": "MIPS",
+        "description": "MIPS Series5 Warrior M-class cores offer high performance, scalable and trusted solutions for a wide range of embedded applications.",
+        "subfamilies": [
+          {
+            "subfamilyName": "MIPS M51xx Cores",
+            "description": "The MIPS M5150/M5100 processor cores are ideal for IoT, wearable and other embedded and real-time applications.",
+            "devices": [
+              {
+                "deviceName": "MIPS M5100",
+                "description": "The MIPS M5100 integrated SRAM controller and a real time execution unit, optimized for low cost, low power microcontroller applications.",
+                "processors": [
+                  {
+                    "procName": "M5100",
+                    "devCore": "M5100",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r5",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              },
+              {
+                "deviceName": "MIPS M5150",
+                "description": "The MIPS M5150 incorporates a high performance L1 cache controller and virtual memory management support for high performance embedded system applications and rich operating systems.",
+                "processors": [
+                  {
+                    "procName": "M5150",
+                    "devCore": "M5150",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r5",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS M62xx Cores",
+            "description": "The MIPS M6200/M6250 processor cores are ideal for microcontroller and embedded-type applications. They implement a 6-stage pipeline design and continue to support both MIPS32 and microMIPS ISAs",
+            "devices": [
+              {
+                "deviceName": "MIPS M6200",
+                "description": "The MIPS M6200 features an integrated 64-bit SRAM controller, a memory protection unit, and a real-time, low-latency execution unit, optimized for cost-efficient, low-power microcontroller and embedded applications.",
+                "processors": [
+                  {
+                    "procName": "M6200",
+                    "devCore": "M6200",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              },
+              {
+                "deviceName": "MIPS M6250",
+                "description": "The MIPS M6250 incorporates a high-performance instruction/data L1 cache controller and a Memory Management Unit (MMU), enabling execution of Linux and other rich operating systems for high performance embedded applications.",
+                "processors": [
+                  {
+                    "procName": "M6200",
+                    "devCore": "M6200",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "familyName": "MIPS Aptiv Generation",
+        "deviceVendor": "MIPS",
+        "description": "MIPS microAptiv is the smallest, lowest-power CPU, MIPS interAptiv is a family of multi-core, multi-threaded 32-bit processors.",
+        "subfamilies": [
+          {
+            "subfamilyName": "MIPS microAptiv Cores",
+            "description": "MIPS microAptiv is the smallest, lowest-power CPU family available. it is a high-performance, compact processor that features advanced DSP capabilities.",
+            "devices": [
+              {
+                "deviceName": "MIPS microAptiv MCU",
+                "description": "a microcontroller (MCU) with a Memory Protection Unit (MPU)",
+                "processors": [
+                  {
+                    "procName": "microAptiv MCU",
+                    "devCore": "microAptiv MCU",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r2",
+                    "devFpu": "NO_FPU",
+                    "devMpu": "MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              },
+              {
+                "deviceName": "MIPS microAptiv MPU",
+                "description": "a microprocessor (MPU) with a Memory Management Unit (MMU) and cache memories",
+                "processors": [
+                  {
+                    "procName": "microAptiv MPU",
+                    "devCore": "microAptiv MPU",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r2",
+                    "devFpu": "NO_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS interAptiv Cores",
+            "description": "MIPS interAptiv is a family of multi-core, multi-threaded 32-bit processors.",
+            "devices": [
+              {
+                "deviceName": "MIPS interAptiv CPU",
+                "description": "a microprocessor (MPU) with a Memory Management Unit (MMU) and cache memories",
+                "processors": [
+                  {
+                    "procName": "interAptiv CPU",
+                    "devCore": "interAptiv CPU",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r3",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS proAptiv Cores",
+            "description": "MIPS proAptiv is a family of microprocessor IP cores designed to deliver the compelling top-line performance required for connected consumer electronics including connected TVs and set-top boxes and high-performance compute in embedded applications.",
+            "devices": [
+              {
+                "deviceName": "MIPS proAptiv CPU",
+                "description": "a microprocessor (MPU) with a Memory Management Unit (MMU) and cache memories",
+                "processors": [
+                  {
+                    "procName": "proAptiv CPU",
+                    "devCore": "proAptiv CPU",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r3",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "familyName": "MIPS Warrior I-Class",
+        "deviceVendor": "MIPS",
+        "description": "MIPS64 architecture multiprocessor core",
+        "subfamilies": [
+          {
+            "subfamilyName": "MIPS I6400",
+            "description": "The MIPS I6400 multiprocessor core brings the proven and respected MIPS64 architecture and a suite of key features and capabilities to a wide range of markets and applications.",
+            "devices": [
+              {
+                "deviceName": "MIPS I6400",
+                "description": "The MIPS I6400 CPU is a ground-up design based on a compact 9-stage dual-issue pipeline and utilizing SMT to set a new standard for performance efficiency among CPU cores in its class. ",
+                "processors": [
+                  {
+                    "procName": "I6400",
+                    "devCore": "I6400",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS I6500",
+            "description": "the I6500 family is a multi-threaded superscalar CPU core which, in a single multi-core cluster, can utilize up to six cores.",
+            "devices": [
+              {
+                "deviceName": "MIPS I6500",
+                "description": "the I6500 family is a multi-threaded superscalar CPU core which, in a single multi-core cluster, can utilize up to six cores.",
+                "processors": [
+                  {
+                    "procName": "I6500",
+                    "devCore": "I6500",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS I6500-F",
+            "description": "Support for other functional safety market segments with IEC 61508 for industrial to follow",
+            "devices": [
+              {
+                "deviceName": "MIPS I6500-F",
+                "description": "Support for other functional safety market segments with IEC 61508 for industrial to follow",
+                "processors": [
+                  {
+                    "procName": "I6500-F",
+                    "devCore": "I6500-F",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS I7200",
+            "description": "the MIPS I7200 processor core provides highly efficient, scalable, parallel processing performance, designed upon a foundation of hardware multi-threading and multi-core cluster CPU technologies.",
+            "devices": [
+              {
+                "deviceName": "MIPS I6500-F",
+                "description": "Support for other functional safety market segments with IEC 61508 for industrial to follow",
+                "processors": [
+                  {
+                    "procName": "I6500-F",
+                    "devCore": "I6500-F",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "familyName": "Warrior P-Class",
+        "deviceVendor": "MIPS",
+        "description": "high-performance compute in embedded applications.",
+        "subfamilies": [
+          {
+            "subfamilyName": "MIPS P5600",
+            "description": "",
+            "devices": [
+              {
+                "deviceName": "MIPS P5600",
+                "description": "The MIPS P6600 CPU is based on a wide issue, deeply out-of-order (OoO) implementation utilizing the latest release 6 of the MIPS64 architecture, supporting up to six cores in a single cluster with high performance cache coherency. ",
+                "processors": [
+                  {
+                    "procName": "P5600",
+                    "devCore": "P5600",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subfamilyName": "MIPS P6600",
+            "description": "",
+            "devices": [
+              {
+                "deviceName": "MIPS P6600",
+                "description": "The MIPS P6600 CPU is based on a wide issue, deeply out-of-order (OoO) implementation utilizing the latest release 6 of the MIPS64 architecture, supporting up to six cores in a single cluster with high performance cache coherency.",
+                "processors": [
+                  {
+                    "procName": "P6600",
+                    "devCore": "P6600",
+                    "devEndian": [
+                      "Little-endian",
+                      "Big-endian"
+                    ],
+                    "devCoreVersion": "mips-r6",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

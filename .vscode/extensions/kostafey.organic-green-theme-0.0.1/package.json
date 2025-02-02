@@ -1,0 +1,40 @@
+{
+	"name": "organic-green-theme",
+	"displayName": "organic-green-theme",
+	"description": "Low-contract green color theme.",
+	"version": "0.0.1",
+	"publisher": "kostafey",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kostafey/organic-green-theme-vscode"
+	},
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "organic-green-theme",
+				"uiTheme": "vs",
+				"path": "./themes/organic-green-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "a07b57dc-cdef-442b-b4f0-3bdaa19c71bc",
+		"publisherId": "5edbc512-d612-4ac8-8ff0-35c2ab9d95c3",
+		"publisherDisplayName": "kostafey",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1730825089389,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 21391
+	}
+}

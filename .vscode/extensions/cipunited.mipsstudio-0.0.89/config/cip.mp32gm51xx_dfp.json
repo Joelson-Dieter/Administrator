@@ -1,0 +1,108 @@
+{
+  "package": {
+    "vendor": "CIP_United",
+    "name": "MP32GM51xx_SDK_DFP",
+    "description": "Device family pack for HVK MP32GM51xx.",
+    "url": "",
+    "releases": [
+      {
+        "version": "0.1.0",
+        "date": "2023-07-06",
+        "changesDesc": "Temporary version of HVK MP32GM51xx Device Family Pack",
+        "tag": "v0.1.0"
+      }
+    ],
+    "families": [
+      {
+        "familyName": "MP32GM51xx Series",
+        "deviceVendor": "HVK",
+        "description": "MP32GM51xx Series are Microcontrollers(MCUs) based on MIPS M5150 Core.",
+        "subfamilies": [
+          {
+            "subfamilyName": "MP32GM51Fxx",
+            "description": "MP32GM51Fxx has FPU and MDU(DSP)",
+            "devices": [
+              {
+                "deviceName": "MP32GM51F2048",
+                "description": "MP32GM51F2048 has 2MB Flash memory, 521K RAM, upto 240MHz MIPS M5150 Core with FPU and MDU(DSP).",
+                "processors": [
+                  {
+                    "procName": "M-Class_M5150",
+                    "devCore": "MIPS-M5150",
+                    "devEndian": ["Little-endian"],
+                    "devCoreVersion": "mips-r5",
+                    "devFpu": "DP_FPU",
+                    "devMpu": "NO_MPU",
+                    "devDsp": "DSP"
+                  }
+                ],
+                "memorys": [
+                  {
+                    "name": "kseg0_data_mem0",
+                    "access": "w!x",
+                    "start": "0x80000000",
+                    "size": "0x40000",
+                    "default": true,
+                    "startup": false,
+                    "alias":"",
+                    "description": "IRAM 0, Size = 256KB, physical adress start from 0x00000000"
+                  },
+                  {
+                    "name": "kseg0_data_mem1",
+                    "access": "w!x",
+                    "start": "0x80040000",
+                    "size": "0x40000",
+                    "default": false,
+                    "startup": false,
+                    "alias":"",
+                    "description": "IRAM 1, Size = 256KB, physical adress start from 0x00040000"
+                  },
+                  {
+                    "name":"kseg0_program_mem",
+                    "access":"rx",
+                    "start":"0x9D000000",
+                    "size":"0x200000",
+                    "default": false,
+                    "startup": true,
+                    "alias":"",
+                    "description": "Flash memory, Size = 2048K"
+                  },
+                  {
+                    "name": "kseg1_data_mem0",
+                    "access": "w!x",
+                    "start": "0xA0000000",
+                    "size": "0x40000",
+                    "default": true,
+                    "startup": false,
+                    "alias":"",
+                    "description": "IRAM 0, Size = 256KB, physical adress = kseg0_data_mem0"
+                  },
+                  {
+                    "name": "kseg1_data_mem1",
+                    "access": "w!x",
+                    "start": "0xA0040000",
+                    "size": "0x40000",
+                    "default": false,
+                    "startup": false,
+                    "alias":"",
+                    "description": "IRAM 1, Size = 256KB, physical adress = kseg0_data_mem1"
+                  },
+                  {
+                    "name": "sfrs",
+                    "access": "",
+                    "start": "0xBF800000",
+                    "size": "0x100000",
+                    "default": false,
+                    "startup": false,
+                    "alias":"",
+                    "description": "SFR, Size = 1MB, physical adress strar from 0x1F800000"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

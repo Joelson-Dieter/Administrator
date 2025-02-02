@@ -1,0 +1,25 @@
+body {
+	/*background-color: #fff;*/
+	min-width: 150px;
+	min-height: 160px;
+}
+
+
+
+.func-button {
+	display: block;
+	width: 140px;
+	height: 28px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	filter: drop-shadow(2px 2px 2px #f3f3f3);
+	border: 2px solid #3c59dba4;
+	border-radius: 6px;
+}
+
+.func-button:hover {
+	background-color: #3254eca4;
+}
+
+
+

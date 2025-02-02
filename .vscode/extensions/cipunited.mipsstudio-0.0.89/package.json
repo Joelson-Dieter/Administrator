@@ -1,0 +1,563 @@
+{
+	"name": "mipsstudio",
+	"displayName": "MIPS Studio",
+	"description": "MIPS Studio is an C/C++ Develop and Debug tools for MIPS CPUs.",
+	"publisher": "CipUnited",
+	"author": "CIP United",
+	"license": "Copyright (C) 2024 CipUnited, all rights reserved",
+	"version": "0.0.89",
+	"readme": "README.md",
+	"repository": "https://github.com/cip-soc-backend/mips_studio.git",
+	"icon": "media/studio_logo.png",
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "dark"
+	},
+	"main": "out/extension.js",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Debuggers",
+		"Snippets"
+	],
+	"keywords": [
+		"C/C++",
+		"C/C++ Debug Tools",
+		"Memory View",
+		"Peripherals",
+		"SVD",
+		"MIPS",
+		"SOC",
+		"MCU",
+		"MPU",
+		"IDE",
+		"Asm grammar highlight"
+	],
+	"scripts": {
+		"vscode:prepublish": "npm run esbuild-base -- --minify",
+		"esbuild-base": "esbuild src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+		"build": "npm run esbuild-base -- --sourcemap",
+		"watch": "npm run esbuild-base -- --sourcemap --watch",
+		"build-tsc": "tsc -p ./",
+		"watch-tsc": "tsc -w -p ./",
+		"lint": "eslint src/ --ext ts && tsc --noEmit"
+	},
+	"assets": [
+		"node_modules/debugdevlist/prebuilds"
+	],
+	"dependencies": {
+		"bindings": "~1.2.1",
+		"fast-xml-parser": "^4.3.6"
+	},
+	"devDependencies": {
+		"@tsconfig/node16": "^1.0.3",
+		"@types/adm-zip": "^0.5.0",
+		"@types/glob": "^8.0.0",
+		"@types/node": "^16.0.0",
+		"@types/vscode": "^1.74.0",
+		"@typescript-eslint/eslint-plugin": "^5.40.0",
+		"@typescript-eslint/parser": "^5.40.0",
+		"@vscode/test-electron": "^2.1.5",
+		"adm-zip": "^0.5.10",
+		"bindings": "~1.2.1",
+		"esbuild": "^0.15.10",
+		"eslint": "^8.25.0",
+		"eslint-plugin-sonarjs": "^0.15.0",
+		"eslint-plugin-unicorn": "^44.0.2",
+		"glob": "^8.0.3",
+		"jsonc": "^2.0.0",
+		"node-loader": "^2.0.0",
+		"typescript": "^4.8.4",
+		"vsce": "^2.15.0"
+	},
+	"extensionDependencies": [
+		"ms-vscode.cpptools"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"productIconThemes": [
+			{
+				"id": "mipsstudio-icons",
+				"label": "mips studio project view icons",
+				"path": "./media/product-icon-theme.json"
+			}
+		],
+		"viewsContainers": {
+			"panel": [
+				{
+					"icon": "$(variable)",
+					"id": "memory-view",
+					"title": "MEMORY"
+				},
+				{
+					"icon": "$(symbol-structure)",
+					"id": "peripheral-view",
+					"title": "PERIPHERAL"
+				}
+			]
+		},
+		"views": {
+			"explorer": [
+				{
+					"id": "mipsstudio.solutionview",
+					"name": "Project Solution",
+					"type": "webview",
+					"visibility": "visible"
+				},
+				{
+					"id": "mipsstudio.projectview",
+					"name": "Project View",
+					"icon": "$(project)",
+					"visibility": "visible"
+				}
+			],
+			"memory-view": [
+				{
+					"id": "mipsstudio.debugMemoryView",
+					"type": "webview",
+					"name": "MEMORY",
+					"when": "inDebugMode && debugType == 'cppdbg' || debugType == 'cppvsdbg' ",
+					"icon": "$(variable)"
+				}
+			],
+			"peripheral-view": [
+				{
+					"id": "mipsstudio.debugPeripheralView",
+					"type": "webview",
+					"name": "PERIPHERAL",
+					"icon": "$(symbol-structure)"
+				}
+			]
+		},
+		"submenus": [],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceExtname =~ /^.[cC]$|^.[cC][cC]$|^.[cC][pP][pP]$|^.S$|^.[lL][dD]$/",
+					"command": "mipsstudio.project.includefile"
+				},
+				{
+					"when": "resourceExtname =~ /^.elf$|.bin$/",
+					"command": "mipsstudio.output.flashdownload"
+				}
+			],
+			"view/title": [
+				{
+					"command": "mipsstudio.startPage.show",
+					"when": "view == mipsstudio.solutionview",
+					"group": "navigation@1"
+				},
+				{
+					"command": "mipsstudio.studio.components",
+					"when": "view == mipsstudio.solutionview",
+					"group": "navigation@2"
+				},
+				{
+					"command": "mipsstudio.project.addFiles",
+					"when": "view == mipsstudio.projectview",
+					"group": "navigation@1"
+				},
+				{
+					"command": "mipsstudio.project.build",
+					"when": "view == mipsstudio.projectview",
+					"group": "navigation@3"
+				},
+				{
+					"command": "mipsstudio.output.debug",
+					"when": "view == mipsstudio.projectview",
+					"group": "navigation@4"
+				},
+				{
+					"command": "mipsstudio.project.searchinProject",
+					"when": "view == mipsstudio.projectview",
+					"group": "navigation@5"
+				},
+				{
+					"when": "view == mipsstudio.projectview  && mipsstudio.project:isShowProjectFileOnly",
+					"command": "mipsstudio.project.showAllIncDirHeaderFiles",
+					"group": "navigation@2"
+				},
+				{
+					"when": "view == mipsstudio.projectview  &&  !mipsstudio.project:isShowProjectFileOnly",
+					"command": "mipsstudio.project.showOnlyProjectFiles",
+					"group": "navigation@2"
+				},
+				{
+					"when": "view == mipsstudio.projectview",
+					"command": "mipsstudio.build.clear"
+				},
+				{
+					"when": "view == mipsstudio.projectview",
+					"command": "mipsstudio.build.exportMakefile"
+				},
+				{
+					"when": "view == mipsstudio.projectview",
+					"command": "mipsstudio.project.addFolderRecursionAllFiles"
+				},
+				{
+					"when": "view == mipsstudio.projectview",
+					"command": "mipsstudio.output.flashdownload"
+				},
+				{
+					"when": "view == mipsstudio.debugPeripheralView",
+					"command": "mipsstudio.debug.PeripRefresh",
+					"group": "navigation@2"
+				},
+				{
+					"when": "view == mipsstudio.debugPeripheralView",
+					"command": "mipsstudio.debug.PeripCollapse",
+					"group": "navigation@1"
+				}
+			],
+			"view/item/context": [
+				{
+					"when": "view == mipsstudio.projectview && viewItem == root ",
+					"command": "mipsstudio.project.settings",
+					"group": "inline"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == root || viewItem == Folder",
+					"command": "mipsstudio.project.newFile",
+					"group": "inline"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == root || viewItem == Folder",
+					"command": "mipsstudio.project.newFolder",
+					"group": "inline"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem != root && viewItem != rootOutside && viewItem != rootNotExist && viewItem != FileNotExist",
+					"command": "mipsstudio.project.openPath"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == ResFile || viewItem == SrcFile || viewItem == FileNotExist",
+					"command": "mipsstudio.project.excludefile"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == Folder",
+					"command": "mipsstudio.project.excludedir"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == ResFile || viewItem == SrcFile || viewItem == File",
+					"command": "mipsstudio.project.fileRename",
+					"group": "navigation@1"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == ResFile || viewItem == SrcFile || viewItem == File",
+					"command": "mipsstudio.project.fileDelete",
+					"group": "navigation@2"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == Folder",
+					"command": "mipsstudio.project.folderRename",
+					"group": "navigation@1"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == Folder",
+					"command": "mipsstudio.project.folderDelete",
+					"group": "navigation@2"
+				},
+				{
+					"when": "view == mipsstudio.projectview && viewItem == SrcFile ",
+					"command": "mipsstudio.build.compile",
+					"group": "inline"
+				}
+			]
+		},
+		"terminal": {},
+		"commands": [
+			{
+				"command": "mipsstudio.debug.PeripRefresh",
+				"title": "Refresh",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "mipsstudio.debug.PeripCollapse",
+				"title": "Collapse All",
+				"icon": "$(collapse-all)"
+			},
+			{
+				"command": "mipsstudio.project.showOnlyProjectFiles",
+				"title": "Only File in Project",
+				"icon": "$(list-filter)"
+			},
+			{
+				"command": "mipsstudio.project.showAllIncDirHeaderFiles",
+				"title": "Show All header Files in Project Dir",
+				"icon": "$(list-tree)"
+			},
+			{
+				"command": "mipsstudio.build.compile",
+				"title": "Compile Src File",
+				"icon": "$(eye)"
+			},
+			{
+				"command": "mipsstudio.project.fileRename",
+				"title": "Rename",
+				"icon": "$(edit)"
+			},
+			{
+				"command": "mipsstudio.project.folderRename",
+				"title": "Rename",
+				"icon": "$(edit)"
+			},
+			{
+				"command": "mipsstudio.project.fileDelete",
+				"title": "Delete",
+				"icon": "$(trash)"
+			},
+			{
+				"command": "mipsstudio.project.folderDelete",
+				"title": "Delete",
+				"icon": "$(trash)"
+			},
+			{
+				"command": "mipsstudio.project.openPath",
+				"title": "Open in OS Explorer"
+			},
+			{
+				"command": "mipsstudio.build.buildOneStep",
+				"title": "Build In OneStep",
+				"category": "MIPS Stduio"
+			},
+			{
+				"command": "mipsstudio.build.clear",
+				"title": "Clean Project",
+				"category": "MIPS Stduio"
+			},
+			{
+				"command": "mipsstudio.project.build",
+				"title": "Build Project",
+				"category": "MIPS Stduio",
+				"icon": {
+					"light": "media/light/build.svg",
+					"dark": "media/dark/build.svg"
+				}
+			},
+			{
+				"command": "mipsstudio.project.searchinProject",
+				"title": "Search In Project",
+				"category": "MIPS Stdio",
+				"icon": "$(search)"
+			},
+			{
+				"command": "mipsstudio.project.newFile",
+				"title": "Create new File in Project",
+				"icon": "$(new-file)"
+			},
+			{
+				"command": "mipsstudio.project.newFolder",
+				"title": "Create new Folder in Project",
+				"icon": "$(new-folder)"
+			},
+			{
+				"command": "mipsstudio.project.addFiles",
+				"title": "Add existing Files to Project",
+				"category": "MIPS Stduio",
+				"icon": "$(add)"
+			},
+			{
+				"command": "mipsstudio.project.addFolderRecursionAllFiles",
+				"title": "Add Files in Folder Recursional",
+				"category": "MIPS Stduio"
+			},
+			{
+				"command": "mipsstudio.project.settings",
+				"title": "Project settings",
+				"category": "MIPS Stduio",
+				"icon": "$(settings-gear)"
+			},
+			{
+				"command": "mipsstudio.build.exportMakefile",
+				"title": "Export Makefile",
+				"category": "MIPS Stduio"
+			},
+			{
+				"command": "mipsstudio.output.debug",
+				"title": "Start Debug",
+				"category": "MIPS Stduio",
+				"icon": {
+					"light": "media/light/debug.svg",
+					"dark": "media/dark/debug.svg"
+				}
+			},
+			{
+				"command": "mipsstudio.output.flashdownload",
+				"title": "Flash Download",
+				"category": "MIPS Stduio"
+			},
+			{
+				"command": "mipsstudio.project.excludedir",
+				"title": "Remove Dir From Project",
+				"category": "MIPS Stduio",
+				"icon": "$(exclude)"
+			},
+			{
+				"command": "mipsstudio.project.excludefile",
+				"title": "Remove File From Project",
+				"category": "MIPS Stduio",
+				"icon": "$(exclude)"
+			},
+			{
+				"command": "mipsstudio.project.includefile",
+				"title": "include File to Project",
+				"category": "MIPS Stduio",
+				"icon": "$(file-add)"
+			},
+			{
+				"command": "mipsstudio.startPage.show",
+				"title": "Start MIPS Studio welcome page",
+				"category": "MIPS Stduio",
+				"icon": "$(go-to-file)"
+			},
+			{
+				"command": "mipsstudio.studio.components",
+				"title": "Manage Soft Components",
+				"category": "MIPS Studio",
+				"icon": "$(extensions)"
+			},
+			{
+				"command": "mipsstudio.newProject",
+				"title": "Create MIPS Studio project",
+				"category": "MIPS Studio"
+			},
+			{
+				"command": "mipsstudio.toolChainsSetting.show",
+				"title": "ToolChains Settings",
+				"category": "MIPS Studio"
+			},
+			{
+				"command": "mipsstudio.debugger.test",
+				"title": "test debugger customRequest",
+				"category": "MIPS Studio"
+			},
+			{
+				"command": "mipsstudio.deviceFamily.manager",
+				"title": "Device Family Info",
+				"category": "MIPS Studio"
+			},
+			{
+				"command": "mipsstudio.sdkPackage.manager",
+				"title": "sdkPackage Info",
+				"category": "MIPS Studio"
+			},
+			{
+				"command": "mipsstudio.sdkPackage.Edit",
+				"title": "Package Edit",
+				"category": "MIPS Studio"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Toolchains",
+				"properties": {
+					"Studio Toolchains": {
+						"type": "array",
+						"order": 3,
+						"description": "Toolchain For Use in MIPS Studio.",
+						"scope": "machine",
+						"items": {
+							"type": "object",
+							"properties": {
+								"groupName": "string",
+								"tool_name": "string",
+								"tool_path": "string"
+							},
+							"additionalProperties": false,
+							"default": {
+								"groupName": "MIPS-GCC",
+								"tool_name": "input your tool name",
+								"tool_path": "input your tool path"
+							}
+						}
+					}
+				}
+			},
+			{
+				"title": "DebugTools",
+				"properties": {
+					"Adapter": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"uniqueItems": true,
+						"default": [],
+						"scope": "machine"
+					},
+					"OpenOCD Path": {
+						"type": "string",
+						"default": "",
+						"description": "The absolute full fsPath of executable File",
+						"scope": "machine"
+					}
+				}
+			}
+		],
+		"languages": [
+			{
+				"id": "MIPS",
+				"extensions": [
+					".s",
+					".asm"
+				],
+				"configuration": "./asmhelper/mips-asm-languages.json"
+			},
+			{
+				"id": "asm-list-file",
+				"extensions": [
+					".list",
+					".lis"
+				],
+				"aliases": [
+					"Assembler list file"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "MIPS",
+				"scopeName": "source.mipsasm",
+				"path": "./asmhelper/mips-asm-grammars.json"
+			},
+			{
+				"language": "asm-list-file",
+				"scopeName": "source.asm.list",
+				"path": "./asmhelper/asm_list.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "MIPS",
+				"path": "./asmhelper/mips-asm-snippets.json"
+			}
+		],
+		"configurationDefaults": {
+			"files.autoSave": "onFocusChange"
+		}
+	},
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": "false",
+			"description": "MIPS Studio need workspace be trusted."
+		}
+	},
+	"__metadata": {
+		"id": "4fd1626b-30ef-4a2d-9f31-56a73080e757",
+		"publisherId": "ab0d4f98-0d00-40e2-8e89-23a3a6489496",
+		"publisherDisplayName": "CipUnited",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1737194468780,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 5146931
+	}
+}

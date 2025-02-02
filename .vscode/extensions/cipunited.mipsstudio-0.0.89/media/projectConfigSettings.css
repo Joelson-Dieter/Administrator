@@ -1,0 +1,403 @@
+body {
+    margin-left: 20px; 
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    /* font-size: larger; */
+    font-weight: bold;
+}
+
+.ContentFlag {
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+details {
+    margin-top: 8px;
+}
+
+details>summary {
+    font-weight: bold;
+}
+
+hr {
+    border-color: var(--vscode-dropdown-border);
+}
+
+
+.action-tab-item,
+.action-item {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.action-tab-item {
+    padding: 16px 6px; 
+}
+
+
+.action-label {
+    text-transform: none;
+    /* font-size: larger; */
+    font-weight: bold;
+    padding: 6px;
+    margin-right: 0;
+    opacity: .9;
+    border-radius: 2px;
+    color: var(--vscode-foreground);
+}
+
+.action-label.checked:not(:focus) {
+    border-bottom-color: var(--vscode-settings-headerForeground);
+    background-color: var(--vscode-statusBar-background,lightgray);
+}
+
+.action-label.checked {
+    opacity: 1;
+    color: var(--vscode-settings-headerForeground);
+    border-bottom: 2px solid var(--vscode-panelTitle-activeBorder);
+    background-color: var(--vscode-statusBar-background);
+}
+
+.settingContent {
+    /* flex-wrap: wrap; */
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.settingContainer {
+    padding: 12px;
+    min-height: 300px;
+}
+
+.settingsArea {
+    margin-top: 6px;
+    border: 2px solid var(--vscode-focusBorder,darkgray);
+    min-width: 1032px;
+    margin-bottom: 18px;
+}
+
+.class1 {
+    margin-left: 8px;
+    padding: 6px;
+    display: flex;
+}
+
+.classNoMargin {
+    padding: 4px;
+    display: flex;
+}
+
+.class3 {
+    display: inline-flex;
+    font-size: small;
+    padding-bottom: 6px;
+    align-items: center;
+}
+
+.class2 {
+    display: flex;
+    flex-flow: column;
+    /* flex-wrap: wrap; */
+    /* margin-top: 6px;
+    margin-bottom: 6px; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.smallLabel {
+    width: 200px;
+}
+
+.minilabel {
+    width: 240px;
+    /* display: inline-block; */
+}
+
+.labeldisabled {
+    color: var(--vscode-disabledForeground, lightslategray);
+}
+
+input:disabled {
+    color: var(--vscode-disabledForeground, lightslategray);
+}
+
+
+
+.smallinput,
+.wideinput,
+.normalinput,
+.noLeftTextArea,
+.wideTextArea,
+.normalTextArea {
+    width: 360px;
+    background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+    padding: 4px 6px;
+    border-width: 1px;
+    box-sizing: border-box;
+}
+
+.smallinput {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.wideTextArea,
+.wideListBox,
+.wideinput {
+    width: 508px;
+}
+
+.noLeftTextArea {
+    width: 612px;
+}
+
+.noLeftTextArea {
+    height: 80px;
+    resize: none;
+}
+
+.wideTextArea,
+.normalTextArea {
+    height: 60px;
+    resize: none;
+}
+
+
+.setting-list-object-widget {
+    margin-bottom: 1px;
+    padding: 1px;
+    width: fit-content;
+    margin-top: 9px;
+    border: 1px solid var(--vscode-settings-dropdownBorder, darkgray);
+}
+
+.setting-list-row-header {
+    background-color: hsla(0, 0%, 51%, .04);
+}
+
+.setting-list-row-header {
+    padding-right: 4px;
+    font-weight: 700;
+}
+
+.setting-list-new-row,
+.setting-list-row,
+.setting-list-row-header {
+    position: relative;
+    /* max-height: 24px; */
+    align-items: center;
+    display: flex;
+}
+
+.setting-list-row:hover{
+    background-color: var(--vscode-inputOption-hoverBackground);
+}
+
+.setting-list-value,
+.list_item,
+.list_item_min,
+.list_item_long,
+.list_item_lastcol,
+.setting-list-object-Left,
+.setting-list-object-value,
+.setting-list-object-valueMin,
+.setting-list-object-valueMidLong,
+.setting-list-object-valueLong {
+    display: inline-block;
+    line-height: 24px;
+    min-height: 24px;
+    font-size: small;
+}
+
+.setting-list-value {
+    min-width: 360px;
+}
+
+.list_item_min {
+    width: 120px;
+    padding-left: 6px;
+}
+
+.setting-list-object-Left {
+    padding-left: 6px;
+    width: 72px;
+    margin-left: 4px;
+}
+
+.list_item {
+    width: 200px;
+}
+
+.list_item_long {
+    width: 520px;
+}
+
+.list_item_lastcol {
+    width: 100%;
+}
+
+.setting-list-object-value {
+    width: 130px;
+}
+
+.setting-list-object-valueMin{
+    width: 90px;
+}
+
+.setting-list-object-edit-item {
+    margin-right: 4px;
+    display: flex;
+}
+
+.setting-list-object-valueLong {
+    width: 960px;
+}
+
+.setting-list-object-valueMidLong {
+    width: 360px;
+}
+
+.setting-list-row-editdiv {
+    width: 120px;
+    display: inline-flex;
+}
+
+.setting-list-object-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 6px;
+    color: var(--vscode-input-foreground);
+    background-color: var(--vscode-settings-textInputBackground);
+    border: 1px solid var(--vscode-settings-textInputBorder);
+}
+
+/* .setting-list-row>.setting-list-object-Last{
+    padding-right: 40px;
+} */
+
+
+.setting-list-widget {
+    border: 1px solid var(--vscode-settings-dropdownBorder, darkgray);
+    padding-left: 4px;
+    width: fit-content;
+}
+
+.setting-item-value {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+.monaco-text-button.setting-list-addButton {
+    display: inline-block;
+    margin-top: 4px;
+    margin-right: 4px;
+    font-size: small;
+}
+
+.setting-value-checkbox {
+    background-color: var(--vscode-settings-checkboxBackground) !important;
+    color: var(--vscode-settings-checkboxForeground) !important;
+    /* border-color: var(--vscode-settings-checkboxBorder)!important; */
+    /* height: 18px;
+    width: 18px; */
+    border: 1px solid var(--vscode-settings-checkboxBorder);
+    border-radius: 3px;
+    /* margin-right: 9px; */
+    margin-left: 0;
+    padding: 0;
+}
+
+.monaco-text-button {
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--vscode-button-border, transparent);
+    line-height: 18px;
+
+    width: auto;
+    white-space: nowrap;
+    padding: 2px 9px;
+    margin-left: 4px;
+    background-color: var(--vscode-button-background, #0078d4);
+    color: var(--vscode-button-foreground, #ffff);
+}
+
+button:disabled {
+    background-color: var(--vscode-button-secondaryBackground, gray);
+    color: var(--vscode-disabledForeground, lightslategray);
+    cursor: not-allowed;
+}
+
+
+.monaco-action-bar {
+    display: inline-flex;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.setting-list-row .monaco-action-bar {
+    visibility: hidden; 
+}
+
+.monaco-action-bar .actions-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.monaco-action-bar .action-item {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+.monaco-action-bar .action-label {
+    width: 16px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 4px;
+    /* display: flex; */
+    /* color: inherit; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}

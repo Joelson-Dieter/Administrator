@@ -1,0 +1,31 @@
+{
+	"incDirList": [],
+	"incFilelist": [],
+	"ldDirList": [],
+	"cppflag": false,
+	"srcFileList": [],
+	"cppSrcFileList": [],
+	"asmFileList": [],
+	"ldFileList": [],
+	"srcDirList": [],
+	"ccSrcDirLlst": [],
+	"asmDirLlst": [],
+	"incPathInfo": "",
+	"excluedPathList": [],
+	"excludeFileList": [],
+	"otherPathList": [],
+	"projectSetting": {
+		"debugConfig": {
+			"strSelectedVendor": "",
+			"strSelectedFamily": "",
+			"strSelectedSubFamily": "",
+			"strSelectedProcessorName": ""
+		},
+		"releaseConfig": {
+			"strSelectedVendor": "",
+			"strSelectedFamily": "",
+			"strSelectedSubFamily": "",
+			"strSelectedProcessorName": ""
+		}
+	}
+}

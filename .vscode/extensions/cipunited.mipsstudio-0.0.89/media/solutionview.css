@@ -1,0 +1,96 @@
+body {
+	/*background-color: #fff;*/
+	min-width: 270px;
+	min-height: 134px;
+	padding-left: 20px;
+	padding-right: 6px;
+	padding-bottom: 12px;
+}
+
+label {
+	display: inline-block;
+	width: 84px;
+}
+
+.normalinput {
+	display: inline-block;
+	width: 200px;
+	background-color: var(--vscode-dropdown-background);
+    color: var(--vscode-input-foreground);
+    /* border-color: var(--vscode-dropdown-border); */
+	border: 1px solid var(--vscode-dropdown-border, transparent);
+	box-sizing: border-box;
+	padding: 4px 6px;
+    height: 100%;
+    line-height: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.func-button {
+	display: inline-flex;
+	height: 28px;
+	min-width: 86px;
+	/* margin-right: 4px;  */
+	margin-top: 4px;
+	white-space: nowrap;
+	/*box-sizing: border-box;*/
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--vscode-button-border,transparent);
+	vertical-align: middle;
+    /*line-height: 18px;*/
+}
+
+.minibutton {
+	width: 40px;
+	height: 27px;
+	border-radius: 2px;
+	border: 1px solid var(--vscode-button-border,transparent);
+	margin-left: 2px;
+}
+
+
+button:enabled {
+	color: var(--vscode-button-foreground);
+    background-color: var(--vscode-button-background);
+	/*background-color: var(--vscode-button-disabledBackground);
+	color: var(--vscode-disabledForeground); */
+} 
+
+
+button:enabled:hover {
+	background-color: var(--vscode-button-hoverBackground);
+}
+
+.minSelect{
+	display: inline-flex;
+	width: 20px;
+	height: 28px;
+	border: 1px solid var(--vscode-dropdown-border,transparent);
+	/*box-sizing: border-box;*/
+	vertical-align: middle;
+	margin-left: -6px; 
+	margin-top: 4px;
+}
+
+.minSelect:enabled{
+	background-color: var(--vscode-dropdown-background); 
+	color: var(--vscode-dropdown-foreground); 
+	border-color: var(--vscode-dropdown-border);
+}
+
+.funcarea {
+	margin-top: 6px;
+}
+
+.divitem {
+    display: inline-flex;
+    margin-top: 6px;
+    /* margin-bottom: 6px; */
+    align-items: center;
+}
+

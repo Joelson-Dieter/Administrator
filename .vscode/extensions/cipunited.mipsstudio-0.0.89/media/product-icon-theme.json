@@ -1,0 +1,20 @@
+{
+	"fonts": [
+		{
+			"id": "vscode10",
+			"src": [
+				{
+					"path": "./demo.woff",
+					"format": "woff"
+				}
+			],
+			"weight": "normal",
+			"style": "normal",
+		}
+	],
+	"iconDefinitions": {
+		"explorer-view-icon": {
+			"fontCharacter": "\\e000"
+		}
+	}
+}

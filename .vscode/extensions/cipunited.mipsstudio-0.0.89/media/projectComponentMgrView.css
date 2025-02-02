@@ -1,0 +1,575 @@
+body {
+    margin: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.class1 {
+    margin-left: 8px;
+    padding-bottom: 6px;
+    display: flex;
+}
+
+.class2 {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+.class3 {
+    padding-bottom: 6px;
+    /* flex-flow: row; */
+}
+
+.minilabel {
+    /* display: flex; */
+    width: 240px;
+}
+
+input+label {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.normalinput {
+    display: inline-flex;
+    width: 300px;
+    background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+    padding: 4px 6px;
+    border-width: 1px;
+    box-sizing: border-box;
+    margin-right: 6px;
+}
+
+.mininput {
+    display: inline-flex;
+    width: 150px;
+    background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+    padding: 4px 6px;
+    border-width: 1px;
+    box-sizing: border-box;
+    margin-right: 16px;
+}
+
+.main-container {
+    margin-left: 20px;
+    margin-right: 320px;
+    overflow: auto;
+}
+
+.mainArea {
+    width: fit-content; 
+    padding-left: 16px;
+    min-height: 500px;
+    padding-top: 8px;
+}
+
+
+.normalListBox {
+    padding: 4px 6px;
+    border: 1px solid;
+    min-width: 300px;
+    min-height: 240px;
+    overflow: auto;
+    /* margin-top: 6px;
+	margin-bottom: 6px; */
+    background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+}
+
+
+.monaco-text-button {
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--vscode-button-border, transparent);
+    line-height: 18px;
+
+    width: auto;
+    white-space: nowrap;
+    padding: 2px 9px;
+    margin-left: 4px;
+    background-color: var(--vscode-button-background, #0078d4);
+    color: var(--vscode-button-foreground, #ffff);
+}
+
+button:disabled {
+    background-color: var(--vscode-button-secondaryBackground, gray);
+    color: var(--vscode-disabledForeground, lightslategray);
+    cursor: not-allowed;
+}
+
+
+.setting-item-control {
+    margin-top: 6px;
+}
+
+.setting-list-object-widget {
+    margin-bottom: 1px;
+    padding: 1px;
+    width: fit-content;
+    margin-top: 9px;
+    border: 1px solid var(--vscode-settings-dropdownBorder, darkgray);
+}
+
+
+.setting-list-row-header {
+    padding-right: 4px;
+    font-weight: 700;
+    background-color: hsla(0, 0%, 51%, .04);
+    align-items: center;
+}
+
+.setting-list-new-row,
+.setting-list-row,
+.setting-list-row-header {
+    position: relative;
+    /* max-height: 24px; */
+    display: flex;
+    align-items: center;
+}
+
+.setting-list-row:hover {
+    background-color: var(--vscode-inputOption-hoverBackground);
+}
+
+.setting-list-row.selected {
+    background-color: var(--vscode-list-activeSelectionBackground);
+}
+
+.setting-list-value,
+.list_item,
+.list_item_long,
+.list_item_lastcol,
+.setting-list-object-key,
+.setting-list-object-value,
+.setting-list-object-valueMidLong,
+.setting-list-object-valueLong {
+    display: inline-block;
+    line-height: 24px;
+    min-height: 24px;
+    font-size: small;
+}
+
+.setting-list-value {
+    min-width: 240px;
+}
+
+.list_item_min {
+    width: 120px;
+}
+
+.setting-list-object-key {
+    width: 72px;
+    margin-left: 4px;
+}
+
+.list_item {
+    width: 200px;
+}
+
+.list_item_long {
+    width: 520px;
+}
+
+.list_item_lastcol {
+    width: 100%;
+}
+
+.setting-list-object-value {
+    width: 160px;
+}
+
+.setting-list-object-valueMin{
+    width: 100px;
+}
+
+
+.setting-list-object-edit-item {
+    margin-right: 4px;
+    display: flex;
+}
+
+.setting-list-object-valueLong {
+    width: 320px;
+    display: flex; 
+}
+
+.setting-list-object-valueMidLong {
+    width: 260px;
+    display: flex; 
+}
+
+.setting-list-row-editdiv {
+    width: 120px;
+    display: inline-flex;
+}
+
+.setting-list-object-input {
+    box-sizing: border-box;
+    /* width: 100%; */
+    padding: 4px 6px;
+    color: var(--vscode-input-foreground);
+    background-color: var(--vscode-settings-textInputBackground);
+    border: 1px solid var(--vscode-settings-textInputBorder);
+}
+
+
+.sidebar-filter {
+    display: flex;
+    align-items: center;
+}
+
+.setting-item-value {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+.monaco-text-button.setting-list-addButton {
+    display: inline-block;
+    margin-top: 4px;
+    margin-right: 4px;
+    font-size: small;
+}
+
+.monaco-action-bar {
+    display: inline-flex;
+    white-space: nowrap;
+    /* height: 100%; */
+}
+
+.setting-list-row .monaco-action-bar {
+    visibility: hidden;
+}
+
+.monaco-action-bar .actions-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    /* height: 100%; */
+    width: 100%;
+    align-items: center;
+}
+
+.monaco-action-bar .action-item {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 26px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--vscode-button-secondaryBackground,#cccccc);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--vscode-button-background,#2196F3);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--vscode-button-background,#2196F3);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(92px);
+    -ms-transform: translateX(92px);
+    transform: translateX(92px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 26px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+label {
+    margin-right: 16px;
+}
+
+  .selectType {
+    display: flex;
+    align-items:  center;
+    width: 60%;
+  }
+
+
+  .item-condition {
+    min-height: 120px;
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .itemCheckErr-infoArea {
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+/* .familyName {
+    display: flex;
+}
+
+
+.subFamilyList {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10px;
+}
+
+.subfamilyName {
+    display: flex;
+    flex-flow: column;
+} */
+
+/* .comGroupList{
+    display: flex;
+    flex-flow: column;
+}
+
+.comGroup {
+    display: flex;
+}
+
+.comSubGroup {
+    display: inline-flex;
+    margin-left: 10px;
+} */
+
+.sidebar-container {
+    display: flex;
+    flex-flow: column;
+    width: 320px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-left: 6px;
+    border: solid 2px var(--vscode-panel-border);
+}
+
+.componentSelectFilterContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.components-container {
+    /* margin-right: 320px; */
+    width: fit-content;
+}
+
+.finishBtnArea {
+	margin: 12px 4px;
+    display:  flex;
+    flex-direction: row-reverse;
+}
+
+.func-button {
+	/* height: 25px; */
+	white-space: nowrap;
+	padding: 4px 12px;
+	box-sizing: border-box;
+	border-radius: 2px;
+	text-align: center;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--vscode-button-border, transparent);
+	min-width: 90px;
+	margin-right: 8px;
+}
+
+.func-button:enabled {
+	color: var(--vscode-button-foreground);
+	background-color: var(--vscode-button-background);
+	/*background-color: var(--vscode-button-disabledBackground);
+	color: var(--vscode-disabledForeground); */
+}
+
+
+.func-button:enabled:hover {
+	background-color: var(--vscode-button-hoverBackground);
+}
+
+/* .sidebar-filter-container {
+
+} */
+
+.sidebar-body {
+    display: flex;
+    flex-flow: column;
+    padding-top: 20px;
+    width: fit-content;
+}
+
+/* .detail-manufacuter:hover {
+    background-color: var(--vscode-inputOption-hoverBackground);
+} */
+
+/* .sidebar-filter {
+    float: right;
+    margin-right: 40px;
+} */
+
+.sidebar-filter-input {
+    box-sizing: border-box;
+    padding: 4px 6px;
+    color: var(--vscode-input-foreground);
+    background-color: var(--vscode-settings-textInputBackground);
+    border: 1px solid var(--vscode-settings-textInputBorder);
+}
+
+.detail-manufacuter:focus-within {
+    background-color: var(--vscode-list-hoverBackground);
+    color: var(--vscode-list-highlightForeground);
+}
+
+/* .detail-family:focus-within {
+    background-color: var(--vscode-list-activeSelectionBackground);
+    color: var(--vscode-list-activeSelectionForeground);
+} */
+
+.detail-family-selected {
+    background-color: var(--vscode-list-activeSelectionBackground);
+    color: var(--vscode-list-activeSelectionForeground);
+}
+
+.devicelist {
+    padding-top: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* 
+.sidebar .sidebar-actions {
+    height: 0;
+    padding-bottom: 4rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-main-header);
+}
+
+.sidebar-filter-container {
+    background: linear-gradient(to bottom,var(--background-primary) 0 calc(100% - 2rem),transparent 100%);
+    display: flex;
+    flex-direction: column;
+    font-size: var(--type-smaller-font-size);
+    padding-bottom: 2rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.sidebar-filter-container .sidebar-filter {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-filter-container .sidebar-filter-label {
+    left: 0.5rem;
+    position: relative;
+    width: 0;
+}
+
+.sidebar-filter-container .sidebar-filter-input-field.is-active, .sidebar-filter-container .sidebar-filter-input-field:focus {
+    padding-right: 7rem;
+    width: 100%;
+}
+
+.sidebar-filter-container .sidebar-filter-input-field.is-active~.button.clear-sidebar-filter-button, .sidebar-filter-container .sidebar-filter-input-field.is-active~.sidebar-filter-count, .sidebar-filter-container .sidebar-filter-input-field:focus~.button.clear-sidebar-filter-button, .sidebar-filter-container .sidebar-filter-input-field:focus~.sidebar-filter-count {
+    display: block;
+}
+
+.button-wrap {
+    align-items: center;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--button-radius);
+    color: var(--button-color);
+    display: flex;
+    font: var(--button-font);
+    gap: 0.25rem;
+    height: var(--button-height);
+    justify-content: center;
+    padding-left: var(--button-padding);
+    padding-right: var(--button-padding);
+    position: relative;
+}
+
+.visually-hidden {
+    clip: rect(1px,1px,1px,1px)!important;
+    border: 0!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important;
+    height: 1px!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: absolute!important;
+    white-space: nowrap!important;
+    width: 1px!important;
+}
+
+.sidebar-filter-container .icon {
+    background-color: var(--icon-secondary);
+    margin-right: 0;
+    position: static;
+    position: relative;
+    z-index: auto;
+} */

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 build.svg Mercurial -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="4.66667in" height="4.66667in" viewBox="0 0 336 336"
+		xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#f2f2f2;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:48}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Mercurial</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape">
+			<title>rect3340</title>
+			<path d="M0 144 L0 240 L0 336 L48 336 L335.25 336 L336 336 L336 144 L288 144 L288 240 L48 240 L48 144 L0 144 ZM96 264
+						 L144 264 L144 312 L96 312 L96 264 ZM192 264 L240 264 L240 312 L192 312 L192 264 Z" class="st1"/>
+		</g>
+		<g id="shape2-3" v:mID="2" v:groupContext="shape" transform="translate(72,-120)">
+			<title>rect3346</title>
+			<rect x="0" y="288" width="48" height="48" class="st1"/>
+		</g>
+		<g id="shape3-5" v:mID="3" v:groupContext="shape" transform="translate(144,-120)">
+			<title>rect3348</title>
+			<rect x="0" y="288" width="48" height="48" class="st1"/>
+		</g>
+		<g id="shape4-7" v:mID="4" v:groupContext="shape" transform="translate(216,-120)">
+			<title>rect3350</title>
+			<rect x="0" y="288" width="48" height="48" class="st1"/>
+		</g>
+		<g id="shape5-9" v:mID="5" v:groupContext="shape" transform="translate(96,-192)">
+			<title>rect3358</title>
+			<path d="M60 192 L60 288 L0 228 L0 264 L72 336 L144 264 L144 228 L84 288 L84 192 L60 192 Z" class="st1"/>
+		</g>
+	</g>
+</svg>

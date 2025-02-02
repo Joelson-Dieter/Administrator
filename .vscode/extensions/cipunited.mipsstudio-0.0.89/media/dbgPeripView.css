@@ -1,0 +1,554 @@
+body {
+    min-width: 480px;
+    padding: 0px 8px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    /* font-size: larger; */
+    font-weight: bold;
+}
+
+
+/* 
+.peripherals {
+    display: inline-block;
+    margin-right: 12px;
+} */
+
+.peripDetails {
+    min-width: 400px;
+    min-height: 600px;
+    width: fit-content;
+}
+
+
+.peripItem {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+.regDetailSwitch,
+.regsContainer {
+    /* padding-top: 6px; */
+    padding-left: 12px;
+    width: fit-content;
+}
+
+.regDataContainer:hover {
+    background-color: var(--vscode-editorHoverWidget-background)
+}
+
+.regDataContainer {
+    padding: 8px 12px;
+}
+
+
+.regNameSpan {
+    padding-left: 8px;
+    padding-right: 16px;
+    font-weight: bold;
+    font-family: monospace;
+    /* width: 120px; */
+}
+
+.regConSum {
+    width: 480px;
+}
+
+.regValueSpan {
+    color: var(--vscode-debugTokenExpression-number);
+    font-weight: bold;
+    float: right;
+    font-family: monospace;
+}
+
+.ValueChanged {
+    background-color: var(--vscode-debugView-stateLabelBackground);
+    color: var(--vscode-debugView-valueChangedHighlight);
+}
+
+.fdValueChanged {
+    color: var(--vscode-debugView-valueChangedHighlight);
+    font-weight: bold;
+    display: inline;
+}
+
+.regModifyApply,
+.fdRowHeader,
+.fdRow,
+.regValueRowHeader,
+.regValueRow,
+.reginfoRow,
+.reginfoRowHeader {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--vscode-panelSectionHeader-background);
+
+}
+
+
+.fdRow:hover {
+    background-color: var(--vscode-editorHoverWidget-border);
+}
+
+.fdRowHeader {
+    /* background-color: var(--vscode-listFilterWidget-background); */
+    margin-top: 12px;
+}
+
+
+.fdBitInfo,
+.fdName,
+.fdRW {
+    width: 55px;
+    padding: 2px 6px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.fdRW {
+    width: 30px;
+}
+
+.fdName {
+    width: 200px;
+    /* word-wrap: break-word; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.fdValue {
+    width: 208px;
+    padding: 2px 6px;
+    /* display: inline-flex; */
+    border-bottom: 1px solid;
+    align-items: center;
+}
+
+.regIcon {
+    height: 12px;
+}
+
+.svgregIcon {
+    position: relative;
+    height: 12px;
+    width: 37px;
+    display: inline-flex;
+}
+
+.svgregIcon::before,
+.svgregIcon::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    border: 2px solid var(--vscode-symbolIcon-variableForeground, greenyellow);
+}
+
+.svgregIcon::before {
+    border-radius: 1px 0 0 0;
+}
+
+.svgregIcon::after {
+    /* border-radius: 50% 50% 50% 0; */
+    transform: translate(11px);
+}
+
+.reginfoRowHeader,
+.regValueRowHeader,
+.fdRowHeader {
+    background-color: var(--vscode-editor-selectionBackground);
+    color: var(--vscode-editor-selectionForeground);
+    font-weight: bold;
+}
+
+.regValueRowHeader {
+    margin-top: 12px;
+}
+
+.regInfo {
+    padding: 6px;
+    width: 90px;
+    border-width: 0;
+    border-right: 1px solid;
+}
+
+.regInfoW {
+    width: 222px;
+    padding: 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.regFieldContainer {
+    display: flex;
+}
+
+.regUnusedField,
+.regBitValue {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.regBitValue {
+    background-color: var(--vscode-editor-background);
+    color: var(--vscode-editorInfo-foreground);
+    border-right: 1px solid;
+}
+
+
+.regUnusedField {
+    color: var(--vscode-diffEditor-unchangedRegionForeground);
+    background-color: var(--vscode-diffEditor-unchangedRegionBackground);
+}
+
+
+
+.regBitIndex {
+    font-family: auto;
+    font-size: small;
+    padding-left: 4px;
+}
+
+.regBitIndexLast {
+    font-family: auto;
+    font-size: small;
+    margin-left: auto;
+    padding-right: 4px;
+}
+
+.regByte {
+    padding: 2px;
+    border-right: 1px solid;
+    width: 128px;
+    display: inline-flex;
+    padding-left: 4px;
+}
+
+.last {
+    border: none;
+}
+
+.fdModifyValue {
+    /* padding-left: 20px;
+    padding-right: 12px; */
+    float: right;
+    display: flex;
+}
+
+.edit_FieldValue {
+    width: 120px;
+    border: none;
+    /* margin: 0px; */
+    padding: 0;
+}
+
+
+.btbregModifyApply {
+    padding: 6px;
+    color: var(--vscode-button-foreground);
+    background-color: var(--vscode-button-background);
+}
+
+
+.btbregModifyApply:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+/* 
+.context-view {
+    position: absolute
+}
+.context-view {
+    -webkit-app-region: no-drag
+}
+
+.menubar-menu-items-holder.monaco-menu-container {
+    border: none;
+    outline: 0
+}
+
+.menubar-menu-items-holder {
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    z-index: 2000
+}
+/* <div class="context-view monaco-menu-container bottom left" style="top: 58px; left: 138px; z-index: 2575; position: absolute; width: initial; display: none;" role="presentation" aria-hidden="true"></div> */
+
+/* 
+.menubar-menu-items-holder.monaco-menu-container :focus {
+    outline: 0
+}
+
+.context-view.monaco-menu-container {
+	outline: 0;
+	border: none;
+	animation: fadeIn 0.083s linear;
+	-webkit-app-region: no-drag;
+}
+
+.monaco-menu {
+	font-size: 13px;
+	border-radius: 5px;
+	min-width: 160px;
+}
+
+.monaco-menu .monaco-action-bar {
+	text-align: right;
+	overflow: hidden;
+	white-space: nowrap;
+}  */
+
+.switch {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 20px;
+    padding: 2px;
+    margin: 0 4px 4px 0;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF 18px);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 18px);
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-sizing: content-box;
+}
+
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    box-sizing: content-box;
+}
+
+.switch-label:before,
+.switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+    box-sizing: content-box;
+}
+
+.switch-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #aaaaaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.switch-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.switch-input:checked~.switch-label {
+    background: var(--vscode-button-background, #E1B42B);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch-input:checked~.switch-label:before {
+    opacity: 0;
+}
+
+.switch-input:checked~.switch-label:after {
+    opacity: 1;
+}
+
+.switch-handle {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-handle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.switch-input:checked~.switch-handle {
+    left: 82px;
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Transition
+========================== */
+.switch-label,
+.switch-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+
+.tab-container {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-switch {
+    display: flex;
+    padding-left: 12px;
+    height: 22px;
+}
+
+.tab-add {
+    padding-top: 6px;
+}
+
+
+.tab-add-select {
+    display: inline-block;
+    width: 150px;
+    background-color: var(--vscode-dropdown-background);
+    color: var(--vscode-input-foreground);
+    /* border-color: var(--vscode-dropdown-border); */
+    border: 1px solid var(--vscode-dropdown-border, transparent);
+    box-sizing: border-box;
+    padding: 4px 6px;
+    height: 100%;
+    line-height: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.tab-add-select option {
+    border-radius: 0px;
+}
+
+.tab-item {
+    display: flex;
+    width: 120px;
+    padding: 3px;
+    height: 100%;
+    align-items: center;
+    background-color:#919191; 
+    border-radius: 12px 6px 0 0
+}
+
+.checked {
+    /* background-color: var(--vscode-statusBar-activebackground, gray); */
+    background: var(--vscode-button-background, #E1B42B);
+    font-weight: bold;
+    border-bottom: 1px solid var(--vscode-activityBarTop-activeBorder, white);
+}
+
+.tab-item.checked .tab-label {
+    color: var(--vscode-button-foreground, #E1B42B);
+}
+
+.tab-label {
+    padding-left: 6px;
+    width: 108px;
+    white-space: nowrap;
+    color: var(--vscode-menu-foreground,whitesmoke);
+    cursor: pointer;
+}
+
+.tab-label-close {
+    float: right;
+}
+
+.tab-label-close:before {
+    display: inline;
+    content: "\2612";
+}
+
+/* 
+.switch-light {
+	padding: 0;
+	background: #FFF;
+	background-image: none;
+}
+.switch-light .switch-label {
+	background: #FFF;
+	border: solid 2px #eceeef;
+	box-shadow: none;
+}
+.switch-light .switch-label:after {
+	color: var(--vscode-button-hoverBackground,#9370DB);
+}
+.switch-light .switch-label:before {
+	right: inherit;
+	left: 11px;
+}
+.switch-light .switch-handle {
+	top: 4px;
+	left: 72px;
+	background: #dadada;
+	width: 20px;
+	height: 20px;
+	box-shadow: none;
+}
+.switch-light .switch-handle:before {
+	background: #eceeef;
+}
+.switch-light .switch-input:checked ~ .switch-label {
+	background: #FFF;
+	border-color: var(--vscode-button-background,#9370DB);
+}
+.switch-light .switch-input:checked ~ .switch-handle {
+	left: 72px;
+	box-shadow: none;
+	background: var(--vscode-button-hoverBackground,#9370DB)
+}
+.switch-light .switch-input:checked ~ .switch-handle:before {
+	background: rgba(255,255,255,0.7);
+} */

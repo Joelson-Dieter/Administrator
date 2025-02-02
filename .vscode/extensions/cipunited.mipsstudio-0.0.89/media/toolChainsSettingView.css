@@ -1,0 +1,247 @@
+body {
+	margin: auto;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+} 
+
+.class1 {
+    margin-left: 8px;
+    padding-bottom: 6px; 
+    display: flex;
+}
+
+.class2 {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+.class3 {
+	padding-bottom: 6px;
+    /* flex-flow: row; */
+}
+
+.minilabel {
+	/* display: flex; */
+	width: 240px;
+}
+
+input + label {
+	padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.normalinput {
+	display: inline-flex;
+	width: 300px;
+	background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+	padding: 4px 6px;
+	border-width: 1px;
+	box-sizing: border-box;
+	margin-right: 6px;
+}
+
+.mininput {
+	display: inline-flex;
+	width: 150px;
+	background-color: var(--vscode-settings-dropdownBackground);
+    color: var(--vscode-settings-dropdownForeground);
+    border-color: var(--vscode-settings-dropdownBorder);
+	padding: 4px 6px;
+	border-width: 1px;
+	box-sizing: border-box;
+	margin-right: 16px;
+}
+
+.mainArea {
+	width: fit-content;
+	margin: auto;  /*可以实现居中*/
+}
+
+
+.normalListBox {
+	padding: 4px 6px;
+	border: 1px solid;
+	min-width: 300px;
+	min-height: 240px;
+	overflow: auto;
+	/* margin-top: 6px;
+	margin-bottom: 6px; */
+	background-color: var(--vscode-settings-dropdownBackground); 
+	color: var(--vscode-settings-dropdownForeground); 
+	border-color: var(--vscode-settings-dropdownBorder);
+}
+
+
+.monaco-text-button {
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--vscode-button-border, transparent);
+    line-height: 18px;
+
+    width: auto;
+    white-space: nowrap;
+    padding: 2px 9px;
+    margin-left: 4px;
+    background-color: var(--vscode-button-background, #0078d4);
+    color: var(--vscode-button-foreground, #ffff);
+}
+
+button:disabled {
+    background-color: var(--vscode-button-secondaryBackground, gray);
+    color: var(--vscode-disabledForeground, lightslategray);
+    cursor: not-allowed;
+}
+
+
+
+.setting-list-object-widget {
+    margin-bottom: 1px;
+    padding: 1px;
+    width: fit-content;
+    margin-top: 9px;
+    border: 1px solid var(--vscode-settings-dropdownBorder, darkgray);
+}
+
+.setting-list-row-header {
+    background-color: hsla(0, 0%, 51%, .04);
+}
+
+.setting-list-row-header {
+    padding-right: 4px;
+    font-weight: 700;
+}
+
+.setting-list-new-row,
+.setting-list-row,
+.setting-list-row-header {
+    position: relative;
+    /* max-height: 24px; */
+    align-items: center;
+    display: flex;
+}
+
+.setting-list-row:hover{
+    background-color: var(--vscode-inputOption-hoverBackground);
+}
+
+
+.setting-list-value,
+.list_item,
+.list_item_long,
+.list_item_lastcol,
+.setting-list-object-key,
+.setting-list-object-value,
+.setting-list-object-valueMidLong,
+.setting-list-object-valueLong {
+    display: inline-block;
+    line-height: 24px;
+    min-height: 24px;
+    font-size: small;
+}
+
+.setting-list-value {
+    min-width: 360px;
+}
+
+.list_item_min {
+    width: 120px;
+}
+
+.setting-list-object-key {
+    width: 72px;
+    margin-left: 4px;
+}
+
+.list_item {
+    width: 200px;
+}
+
+.list_item_long {
+    width: 520px;
+}
+
+.list_item_lastcol {
+    width: 100%;
+}
+
+.setting-list-object-value {
+    width: 180px;
+}
+
+.setting-list-object-edit-item {
+    margin-right: 4px;
+    display: flex;
+}
+
+.setting-list-object-valueLong {
+    width: 480px;
+}
+
+.setting-list-object-valueMidLong {
+    width: 260px;
+}
+
+.setting-list-row-editdiv {
+    width: 120px;
+    display: inline-flex;
+}
+
+.setting-list-object-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 6px;
+    color: var(--vscode-input-foreground);
+    background-color: var(--vscode-settings-textInputBackground);
+    border: 1px solid var(--vscode-settings-textInputBorder);
+}
+
+
+
+.setting-item-value {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+.monaco-text-button.setting-list-addButton {
+    display: inline-block;
+    margin-top: 4px;
+    margin-right: 4px;
+    font-size: small;
+}
+
+.monaco-action-bar {
+    display: inline-flex;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.setting-list-row .monaco-action-bar {
+    visibility: hidden; 
+}
+
+.monaco-action-bar .actions-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.monaco-action-bar .action-item {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
